@@ -257,6 +257,8 @@ class Enclosure(object):
         self.lang = global_config['lang']
         self.config = global_config.get("enclosure")
 
+        # TODO check for 4SeeedMic and start respective API
+
         self.__init_serial()
         self.reader = EnclosureReader(self.serial, self.ws, self.lang)
         self.writer = EnclosureWriter(self.serial, self.ws)
